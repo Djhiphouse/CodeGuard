@@ -7,9 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', \App\Livewire\HomeView::class)->name('dashboard');
+Route::get('/license', \App\Livewire\LicenseView::class)->name('license');
+Route::get('/application', \App\Livewire\ApplicationView::class)->name('application');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
