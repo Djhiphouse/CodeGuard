@@ -50,6 +50,9 @@
             <a wire:navigate href="{{route('session')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:translate-x-5 ease-in-out delay-75 translate-x-0 hover:bg-green-700">
                 Sessions
             </a>
+            <a wire:navigate href="{{route('variable')}}" class="block py-2.5 px-4 rounded transition duration-200 hover:translate-x-5 ease-in-out delay-75 translate-x-0 hover:bg-green-700">
+                Variables
+            </a>
             <div class="px-4 py-2 bg-gray-800 rounded text-white hover:translate-x-5 ease-in-out delay-75 translate-x-0 hover:bg-green-700">
                 <form method="POST" action="{{ route('logout') }}" class="">
                     @csrf
