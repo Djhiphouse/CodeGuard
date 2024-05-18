@@ -37,7 +37,7 @@
                                         @endif
                                     </td>
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm text-gray-500">
-                                        <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">{{$license->discord_name}}</span>
+                                        <span class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium @if($license->discord_name != '' || $license->discord_name != '') text-green-700 ring-1 ring-inset ring-green-600/20 @else text-red-700 ring-1 ring-inset ring-red-600/20 @endif">@if($license->discord_name == '' || $license->discord_name == '') Not Found @else {{$license->discord_name}} @endif</span>
                                     </td>
                                     <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm">
                                         @if($license->state == 0)
